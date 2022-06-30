@@ -3,7 +3,7 @@
 /**
  * main - entry
  *
- * return (0)
+ * return: always 0 (success)
  *
  */
 
