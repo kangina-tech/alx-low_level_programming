@@ -9,7 +9,7 @@ int main(void)
 int y;
 for (y = 97; y <= 122; y++)
 {
-<< << << << HEAD
+< << << << HEAD
 if (m == 101 || m == 113)
 == == == ==
 if (y == 101 || y == 113)
