@@ -1,27 +1,25 @@
 #include <stdio.h>
+
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * main - main block
+ * Description:  prints the alphabet in lowercase,
+ * and then in uppercase, followed by a new line.
+ * Return: 0
  */
 int main(void)
 {
-int x, y;
-<< << << < HEAD
-for (m = 97; m <= 122; m++)
-putchar(m);
-for (n = 65; n <= 90; n++)
-putchar(n);
-== == == =
-for (x = 97; x <= 122; x++)
+char c = 'a';
+while (c <= 'z')
 {
-putchar(x);
+putchar(c);
+c++;
 }
-for (y = 65; y <= 90; y++)
+c = 'A';
+while (c <= 'Z')
 {
-putchar(y);
+putchar(c);
+c++;
 }
->> >> >> >
 putchar('\n');
 return (0);
 }
