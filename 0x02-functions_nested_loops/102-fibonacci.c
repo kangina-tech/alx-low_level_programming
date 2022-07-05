@@ -5,18 +5,24 @@
  */
 int main(void)
 {
-int counter;
-int countto = 50;
-long a = 1;
-long b = 2;
-for (counter = 1; counter <= (countto / 2); counter++)
+int count = 2;
+long int i = 1, j = 2;
+long int k;
+printf("%lu, ", i);
+while (count <= 50)
 {
-printf("%li %li ", a, b);
-a += b;
-b += a;
+if (count == 50)
+{
+printf("%lu\n", j);
 }
-if (countto % 2 == 1)
-printf("%li", a);
-printf("\n");
+else
+{
+printf("%lu, ", j);
+}
+k = j;
+j += i;
+i = k;
+count++;
+}
 return (0);
 }
