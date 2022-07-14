@@ -8,16 +8,17 @@
 
 char *rot13(char *str)
 {
-int i = 0, j;
-char s[] =  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-char s1[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-for (; str[i] != '\0'; i++)
+int index1, index2;
+char alphabet[52] =  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char rot13key[52] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+while (str[++index1])
 {
-for (j = 0; j <= 51; j++)
+for (index2 = 0; index2 < 52; index2++)
 {
-if (s[j] == str[i])
+if (str[index1] == alphabet[index2])
 {
-str[i] = s1[j];
+str[index1] = rot13key[index2];
+break;
 }
 }
 }
