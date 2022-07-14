@@ -2,25 +2,26 @@
 
 /**
  * rot13 -  encodes a string using rot13
- * @str:the string targeted
+ * @s:the string targeted
  * Return: returns the encoded string
  */
 
-char *rot13(char *str)
+char *rot13(char *s)
 {
-int index1, index2;
-char alphabet[52] =  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-char rot13key[52] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-while (str[++index1])
+int count = 0, i;
+char alphabet[] =  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+while (*(s + count) != '\0')
 {
-for (index2 = 0; index2 < 52; index2++)
+for (i = 0; i < 52; i++)
 {
-if (str[index1] == alphabet[index2])
+if (*(s + count) == alphabet[i])
 {
-str[index1] = rot13key[index2];
+*(s + count) = rot13[i];
 break;
 }
 }
+count++;
 }
-return (str);
+return (s);
 }
